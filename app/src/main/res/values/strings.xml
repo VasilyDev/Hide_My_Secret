@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hide My Secret</string>
+    <string name="time_to_hide">Time to hide</string>
+    <string name="start_activity_button">start activity button</string>
+    <string name="secret_subject">Subject</string>
+    <string name="ex_i_still_remember_the_day_when">Ex.: I still remember the day when…</string>
+    <string name="bury_your_secret_here">Bury your secret here</string>
+</resources>

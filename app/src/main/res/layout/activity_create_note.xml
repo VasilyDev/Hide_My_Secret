@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".CreateNote">
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="379dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="127dp"
+        android:layout_marginEnd="21dp"
+        android:background="@color/white"
+        android:ems="16"
+        android:hint="@string/secret_subject"
+        android:inputType="text|textAutoCorrect"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="375dp"
+        android:layout_height="85dp"
+        android:layout_below="@+id/editTextTitle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="21dp"
+        android:background="@color/white"
+        android:ems="16"
+        android:gravity="start|top"
+        android:hint="@string/ex_i_still_remember_the_day_when"
+        android:inputType="textMultiLine"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="291dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/editTextDescription"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="108dp"
+        android:background="@drawable/button_normal"
+        android:padding="8dp"
+        android:text="@string/bury_your_secret_here"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:onClick="onClickSaveNote"
+        app:backgroundTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
+
+</RelativeLayout>
