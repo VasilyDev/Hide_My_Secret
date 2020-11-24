@@ -1,12 +1,14 @@
 package ru.mirotvortsev.hidemysecret;
 
 public class SecretNote {
-    private String title;
-    private String description;
+    private final String title;
+    private final String description;
+    private final int id;
 
-    SecretNote(String title, String description) {
+    SecretNote(String title, String description, int id) {
         this.title = title;
         this.description = description;
+        this.id = id;
     }
 
     public String getTitle() {
@@ -18,4 +20,7 @@ public class SecretNote {
     }
 
 
+    public int getId() {
+        return id;
+    }
 }

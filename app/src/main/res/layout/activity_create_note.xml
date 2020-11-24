@@ -9,8 +9,8 @@
 
     <EditText
         android:id="@+id/editTextTitle"
-        android:layout_width="379dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -31,8 +31,8 @@
 
     <EditText
         android:id="@+id/editTextDescription"
-        android:layout_width="375dp"
-        android:layout_height="85dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/editTextTitle"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -57,11 +57,11 @@
         android:layout_marginTop="43dp"
         android:layout_marginEnd="108dp"
         android:background="@drawable/button_normal"
+        android:onClick="onClickSaveNote"
         android:padding="8dp"
         android:text="@string/bury_your_secret_here"
         android:textColor="@color/black"
         android:textSize="17sp"
-        android:onClick="onClickSaveNote"
         app:backgroundTint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

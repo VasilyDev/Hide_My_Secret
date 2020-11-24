@@ -12,12 +12,17 @@ import java.util.ArrayList;
 
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHolder> {
 
-    private ArrayList<SecretNote> notes;
+    private final ArrayList<SecretNote> notes;
+    //создадим в нашем адаптере объект нашего слушателя
+    private onNoteClickListener onNoteClickListener;
 
     public NotesAdapter(ArrayList<SecretNote> notes) {
         this.notes = notes;
     }
 
+    public void setOnNoteClickListener(NotesAdapter.onNoteClickListener onNoteClickListener) {
+        this.onNoteClickListener = onNoteClickListener;
+    }
 
     @NonNull
     @Override
@@ -39,15 +44,23 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
         return notes.size();
     }
 
-    class NotesViewHolder extends RecyclerView.ViewHolder{
+    //создаём интерфейс будет слушать щелчки на элементы
+    interface onNoteClickListener {
+        void onNoteClick(int position);
 
-        private EditText editTextTitle;
-        private EditText editTextDescription;
+        void onLongClick(int position);
+    }
+
+    static class NotesViewHolder extends RecyclerView.ViewHolder {
+
+        private final EditText editTextTitle;
+        private final EditText editTextDescription;
 
         public NotesViewHolder(@NonNull View itemView) {
             super(itemView);
             editTextTitle = itemView.findViewById(R.id.editTextTitle);
             editTextDescription = itemView.findViewById(R.id.editTextDescription);
+
         }
     }
 }

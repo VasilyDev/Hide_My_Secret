@@ -5,4 +5,7 @@
     <string name="secret_subject">Subject</string>
     <string name="ex_i_still_remember_the_day_when">Ex.: I still remember the day when…</string>
     <string name="bury_your_secret_here">Bury your secret here</string>
+    <string name="warning_fill_fields">Аll fields must be filled!</string>
+    <string name="banner_ad_unit_id">ca-app-pub-1055278685004574/2577809720</string>
+
 </resources>

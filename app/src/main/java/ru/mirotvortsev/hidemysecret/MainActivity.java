@@ -1,6 +1,6 @@
 package ru.mirotvortsev.hidemysecret;
-
-import androidx.appcompat.app.AppCompatActivity;
+/*   <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+ */
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,24 +8,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.ArrayList;
 
-import com.huawei.agconnect.apms.APMS;
-import com.huawei.agconnect.apms.custom.CustomTrace;
 
 public class MainActivity extends Activity {
 
-    private ArrayList<SecretNote> notes = new ArrayList<>();
+    private static final String TAG = "MainActivity";
+    private final ArrayList<SecretNote> notes = new ArrayList<>();
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        CustomTrace customTrace = APMS.getInstance().createCustomTrace("testTrace");
-        customTrace.start();
-        customTrace.putProperty("login_success_times", "login_fail_times");
-        customTrace.stop();
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
     }
+
 
     public void onClickStartApp(View view) {
         Button button = findViewById(R.id.button);
